@@ -14,31 +14,31 @@
     <div class="calc_board">
         <table>
             <tr>
-                <th colspan="4"><input type="text" id="display" disabled></th>
+                <th colspan="4"><input type="text" id="display" value="0" disabled></th>
             </tr>
             <tr>
                 <td><button class="calcbut" type="button" onclick="numclick('7')">7</button></td>
                 <td><button class="calcbut" type="button" onclick="numclick('8')">8</button></td>
                 <td><button class="calcbut" type="button" onclick="numclick('9')">9</button></td>
-                <td><button class="calcbut" type="button">/</button></td>
+                <td><button class="calcbut" type="button" onclick="symbolclick('/')">/</button></td>
             </tr>
             <tr>
                 <td><button class="calcbut" type="button" onclick="numclick('4')">4</button></td>
                 <td><button class="calcbut" type="button" onclick="numclick('5')">5</button></td>
                 <td><button class="calcbut" type="button" onclick="numclick('6')">6</button></td>
-                <td><button class="calcbut" type="button">*</button></td>
+                <td><button class="calcbut" type="button" onclick="symbolclick('*')">*</button></td>
             </tr>
             <tr>
                 <td><button class="calcbut" type="button" onclick="numclick('1')">1</button></td>
                 <td><button class="calcbut" type="button" onclick="numclick('2')">2</button></td>
                 <td><button class="calcbut" type="button" onclick="numclick('3')">3</button></td>
-                <td><button class="calcbut" type="button">-</button></td>
+                <td><button class="calcbut" type="button" onclick="symbolclick('-')">-</button></td>
             </tr>
             <tr>
                 <td><button class="calcbut" type="button" onclick="numclick('0')">0</button></td>
-                <td><button class="calcbut" type="button">.</button></td>
-                <td><button class="calcbut" type="button">=</button></td>
-                <td><button class="calcbut" type="button">+</button></td>
+                <td><button class="calcbut" type="button" onclick="numclick('.')">.</button></td>
+                <td><button class="calcbut" type="button" onclick="symbolclick('=')">=</button></td>
+                <td><button class="calcbut" type="button" onclick="symbolclick('+')">+</button></td>
             </tr>
         </table>
     </div>
