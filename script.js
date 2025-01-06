@@ -1,36 +1,36 @@
 var inputstring = "";
-var result = 0.0;
+let result = NaN;
+var previnput = 0.0;
+var nowinput = 0.0;
 function numclick(num){
     inputstring += num;
     document.getElementById("display").value = inputstring;
 }
 function symbolclick(symbol){
+    previnput = nowinput;
+    
+    nowinput = parseFloat(inputstring);
+    if (isNaN(result)){
+        result = nowinput;
+    }
+    inputstring = "";
     switch (symbol){
         case "+":
-            result += parseFloat(inputstring);
-            console.log(result);
-            inputstring = "";
-            document.getElementById("display").value = 0;
+            result += nowinput;
+            document.getElementById("display").value = result;
             break;
         case "-":
-            result -= parseFloat(inputstring);
-            inputstring = "";
-            document.getElementById("display").value = 0;
+            result -= nowinput;
+            document.getElementById("display").value = result;
             break;
         case "*":
-            result *= parseFloat(inputstring);
-            inputstring = "";
-            document.getElementById("display").value = 0;
+            
             break;
         case "/":
-            result /= parseFloat(inputstring);
-            inputstring = "";
-            document.getElementById("display").value = 0;
+            
             break;
         case "=":
-            
             document.getElementById("display").value = result;
-            console.log(result);
             break;
     }
 }
